@@ -1,0 +1,12 @@
+:root {
+  /* COMPONENTS */
+  /* YO-CARD */
+  --yo-card-bg-color: hsl(from var(--color-text) h s l/0.75);
+  --yo-card-color: hsl(from var(--color-bg) h s l/0.75);
+  --yo-card-border-radius: var(--space-100);
+  --yo-card-direction: column;
+  --yo-card-spacing: var(--space-100);
+  --yo-card-gap: 0;
+    /* YO-CARD */
+  --yo-button-color: var(--color-primary);
+}

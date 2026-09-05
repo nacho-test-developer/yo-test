@@ -1,0 +1,21 @@
+:host {
+  background-color: var(--yo-card-bg-color, --color-bg);
+  color: var(--yo-card-color, --color-text);
+  border-radius: var(--yo-card-border-radius, 0);
+  display: flex;
+  flex-direction: var(--yo-card-direction, column);
+  gap: var(--yo-card-gap);
+  overflow: hidden;
+  padding-bottom: var(--yo-card-spacing);
+}
+
+.yo-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: var(--yo-card-gap);
+  padding-inline: var(--yo-card-spacing);
+}
+
+@unocss-placeholder;
