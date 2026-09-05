@@ -9,4 +9,11 @@
   --yo-card-gap: 0;
     /* YO-CARD */
   --yo-button-color: var(--color-primary);
+  /* YO-SKELETON */
+  --yo-skeleton-bg: hsl(0 0% 50% / 0.25);
+  --yo-skeleton-highlight: hsl(0 0% 100% / 0.45);
+  --yo-skeleton-radius: 0.375rem;
+  --yo-skeleton-box-radius: 0.75rem;
+  --yo-skeleton-height: 1rem;
+  --yo-skeleton-duration: 1.5s;
 }

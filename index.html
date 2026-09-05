@@ -13,6 +13,10 @@
       type="module"
       src="/src/components/yo-countdown/yo-countdown.ts"
     ></script>
+    <script
+      type="module"
+      src="/src/components/yo-skeleton/yo-skeleton.ts"
+    ></script>
   </head>
   <body>
     <main>
@@ -23,13 +27,32 @@
           a 600px</span
         >
       </div>
+      <div class="container-grid-example">
+        <yo-skeleton type="rectangle" size="100%" show></yo-skeleton>
+        <br />
+        <yo-skeleton type="box" size="160px 120px" show></yo-skeleton>
+        <br />
+        <yo-skeleton type="circle" size="80px" show></yo-skeleton>
+        <br />
+        <yo-skeleton id="skeleton-toggle" show>
+          <p>Loaded after skeleton</p>
+        </yo-skeleton>
+        <button id="skeleton-btn" type="button">Switch show</button>
+        <script type="module">
+          const skeleton = document.querySelector("#skeleton-toggle");
+          document
+            .querySelector("#skeleton-btn")
+            ?.addEventListener("click", () => {
+              if (skeleton) skeleton.show = !skeleton.show;
+            });
+        </script>
+      </div>
       <div class="ui-grid">
         <yo-card>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            commodi unde error nihil. Quisquam blanditiis ipsam aspernatur
-            possimus in dolorem odio, dolorum ab, optio corrupti labore sint
-            doloribus laborum ducimus?
+            This is an example text, This is an example text, This is an example
+            text, This is an example text, This is an example text, This is an
+            example text
           </p>
           <yo-image slot="image"></yo-image>
           <yo-button ui="full" slot="actions"
@@ -43,10 +66,9 @@
         </yo-card>
         <yo-card>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            commodi unde error nihil. Quisquam blanditiis ipsam aspernatur
-            possimus in dolorem odio, dolorum ab, optio corrupti labore sint
-            doloribus laborum ducimus?
+            This is an example text, This is an example text, This is an example
+            text, This is an example text, This is an example text, This is an
+            example text
           </p>
           <yo-image slot="image"></yo-image>
         </yo-card>

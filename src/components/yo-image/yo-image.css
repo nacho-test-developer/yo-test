@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+@unocss-placeholder;

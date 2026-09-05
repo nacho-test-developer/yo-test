@@ -58,6 +58,9 @@ main {
   margin-bottom: 1rem;
 }
 
+yo-button {
+  --yo-button-color: var(--color-black);
+}
 yo-button::part(suffix) {
   color: var(--color-red);
 }
@@ -65,4 +68,12 @@ yo-button::part(suffix) {
 yo-card {
   --yo-card-gap: var(--space-200);
   --yo-card-spacing: var(--space-200);
+}
+
+.yo-image::part(img) {
+  opacity: 0.1;
+}
+
+button {
+  border-radius: 80px;
 }

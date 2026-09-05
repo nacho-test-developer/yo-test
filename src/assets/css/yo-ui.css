@@ -2,11 +2,12 @@
   /* COLORS */
   --color-primary: hsl(237, 100%, 70%);
   --color-secondary: hsl(110, 100%, 70%);
-  --color-white:   hsl(84, 100%, 100%);
-  --color-black:   hsl(0, 3%, 15%);
+  --color-white: hsl(84, 100%, 100%);
+  --color-black: hsl(0, 3%, 15%);
+  --color-red: hsl(0, 100%, 50%);
 
   /* SPACING */
-  --space-50:  0.5rem;
+  --space-50: 0.5rem;
   --space-100: 1rem;
   --space-150: 1.5rem;
   --space-200: 2rem;
@@ -16,16 +17,16 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-  --color-primary: var(--color-primary);
-  --color-bg: var(--color-white);
-  --color-text: var(--color-black);
+    --color-primary: var(--color-primary);
+    --color-bg: var(--color-white);
+    --color-text: var(--color-black);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --color-primary: var(--color-secondary);
-  --color-bg: var(--color-black);
-  --color-text: var(--color-white);
+    --color-primary: var(--color-secondary);
+    --color-bg: var(--color-black);
+    --color-text: var(--color-white);
   }
 }
