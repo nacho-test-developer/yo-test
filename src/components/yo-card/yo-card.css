@@ -17,5 +17,3 @@
   gap: var(--yo-card-gap);
   padding-inline: var(--yo-card-spacing);
 }
-
-@unocss-placeholder

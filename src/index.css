@@ -70,9 +70,9 @@ yo-card {
   --yo-card-spacing: var(--space-200);
 }
 
-.yo-image::part(img) {
+/* .yo-image::part(img) {
   opacity: 0.1;
-}
+} */
 
 button {
   border-radius: 80px;

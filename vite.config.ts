@@ -1,4 +1,4 @@
-import UnoCSS from 'unocss/vite'
+// import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
 import litCss from 'vite-plugin-lit-css'
 
@@ -13,9 +13,9 @@ export default defineConfig({
   //   },
   // },
   plugins: [
-    UnoCSS({
-      mode: 'shadow-dom',
-    }),
+    // UnoCSS({
+    //   mode: 'shadow-dom',
+    // }),
     litCss({
       exclude: './src/index.css'
     }),
