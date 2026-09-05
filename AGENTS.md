@@ -7,7 +7,6 @@ Lit 3 + Vite 5 + TS prototype for `yo-*` Web Components. No README, tests, lint,
 - `npm start` — dev server (no test/preview needed for most changes).
 - `npm run build` — always run to verify; it is `tsc && vite build` (strict typecheck, `include: ["src"]` only).
 - `npm run preview` — serve `dist/`. Do not hand-edit `dist/`.
-- Known build warning (`Unexpected ";"` from `.flex-grow{...};`) is pre-existing UnoCSS output, not a failure.
 
 ## Entrypoints
 
@@ -17,9 +16,9 @@ Lit 3 + Vite 5 + TS prototype for `yo-*` Web Components. No README, tests, lint,
 
 ## Styling (non-obvious)
 
-- Two patterns coexist: `static styles = css\`...\`` (`yo-button`, `yo-image`) vs `import styles from './x.css'` via `vite-plugin-lit-css` (`yo-card`). Follow the file's existing pattern.
+- Two patterns coexist: `static styles = css\`...\`` (`yo-button`, `yo-image`) vs `import styles from './x.css'`via`vite-plugin-lit-css` (`yo-card`). Follow the file's existing pattern.
 - `vite.config.ts` uses UnoCSS `mode: 'shadow-dom'` + `litCss({ exclude: './src/index.css' })`. Global CSS stays global; shadow CSS goes through the plugin.
-- External `.css` imported as Lit styles **must end with `@unocss-placeholder;`** (see `yo-card.css:21`) or UnoCSS utilities (e.g. `flex` in template) won't apply inside shadow DOM.
+- External `.css` imported as Lit styles **must end with `@unocss-placeholder` without trailing `;`** (see `yo-card.css:21`) or UnoCSS utilities (e.g. `flex` in template) won't apply inside shadow DOM. The trailing `;` leaves a stray `};` in the generated CSS and triggers the esbuild `Unexpected ";"` warning.
 - Tokens: `src/assets/css/yo-ui.css` (colors/spacing, light/dark via `prefers-color-scheme`) + `yo-config.css` (`--yo-*` component defaults), wired via `src/index.css`. Customize components via `--yo-*` vars or `::part`, never by reaching into shadow DOM.
 - `src/index.css` demo uses `main { container: parent / inline-size }` + `@container parent (width <= 600px)` — keep that naming/syntax.
 
