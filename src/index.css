@@ -36,17 +36,12 @@ body {
   background-color: var(--color-bg);
   color: var(--color-body);
   margin: 0;
-  display: grid;
-  place-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 main {
-  container: parent / inline-size; /* Nombre del container */
   max-width: 80rem;
-  margin: var(--yo-spacing-medium) auto;
-  padding-inline: var(--yo-spacing-medium);
+  margin: 0 auto;
+  padding: var(--yo-spacing-medium);
   width: calc(100% - var(--yo-spacing-medium));
 }
 
@@ -73,15 +68,13 @@ main {
   gap: var(--yo-spacing-medium);
 }
 
-@container parent (width <= 600px) {
-  .ui-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 /* SECTIONS */
 :where(h2, hr, .s-example) {
   margin-bottom: var(--yo-spacing-medium);
+}
+
+.s-example {
+  container: parent / inline-size; /* Nombre del container */
 }
 
 .s-example--skeleton .ui-grid {
@@ -92,11 +85,17 @@ main {
   margin-bottom: var(--yo-spacing-small);
 }
 
+.s-example--skeleton .left {
+  padding: var(--yo-spacing-medium);
+}
+
 .s-example--card .ui-grid {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* ELEMENTS */
-.skeleton-btn {
-  margin-top: var(--yo-spacing-medium);
+/* CONTAINER */
+@container parent (width <= 600px) {
+  .s-example .ui-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -35,16 +35,35 @@
         <h2>yo-skeleton</h2>
         <div class="ui-grid">
           <div class="left">
-            <yo-skeleton id="skeleton-toggle" show>
-              <p>Loaded after skeleton</p>
-            </yo-skeleton>
-            <yo-button
-              class="skeleton-btn"
-              id="skeleton-btn"
-              ui="full"
-              slot="actions"
-              >Switch show</yo-button
-            >
+            <yo-card>
+              <yo-image slot="image"></yo-image>
+              <yo-skeleton class="skeleton-toggle" size="100% 150px" show>
+                <p>
+                  This is an example text, This is an example text, This is an
+                  example text, This is an example text, This is an example
+                  text, This is an example text
+                </p>
+                <br />
+                <p>
+                  This is an example text, This is an example text, This is an
+                  example text, This is an example text, This is an example
+                  text, This is an example text
+                </p>
+                <br />
+                <p>
+                  This is an example text, This is an example text, This is an
+                  example text, This is an example text, This is an example
+                  text, This is an example text
+                </p>
+              </yo-skeleton>
+              <yo-button
+                class="skeleton-btn"
+                id="skeleton-btn"
+                ui="full"
+                slot="actions"
+                >Switch show</yo-button
+              >
+            </yo-card>
           </div>
           <div class="right">
             <h4>rectangle</h4>
@@ -90,7 +109,7 @@
     </main>
 
     <script type="module">
-      const skeleton = document.querySelector("#skeleton-toggle");
+      const skeleton = document.querySelector(".skeleton-toggle");
       document.querySelector("#skeleton-btn")?.addEventListener("click", () => {
         if (skeleton) skeleton.show = !skeleton.show;
       });

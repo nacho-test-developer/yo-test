@@ -2,6 +2,7 @@
   background-color: var(--yo-card-bg-color, --color-bg);
   color: var(--yo-card-color, --color-text);
   border-radius: var(--yo-card-border-radius, 0);
+  box-shadow: var(--yo-card-box-shadow, none);
   display: flex;
   flex-direction: var(--yo-card-direction, column);
   gap: var(--yo-card-gap);

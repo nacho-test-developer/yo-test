@@ -1,18 +1,19 @@
 :root {
   /* YO-CARD */
-  --yo-card-bg-color: hsl(from var(--gray-100) h s l/0.75);
+  --yo-card-bg-color: var(--white);
+  --yo-card-box-shadow: var(--elevation-1-50);
   --yo-card-color: hsl(from var(--color-body) h s l/0.75);
   --yo-card-border-radius: var(--yo-border-radius-medium);
   --yo-card-direction: column;
   --yo-card-spacing: var(--yo-spacing-small);
-  --yo-card-gap: var(--yo-spacing-xsmall);
+  --yo-card-gap: var(--yo-spacing-small);
 
   /* YO-BUTTON */
   --yo-button-color: currentcolor;
 
   /* YO-SKELETON */
-  --yo-skeleton-bg: var(--gray-200);
-  --yo-skeleton-highlight: var(--gray-100);
+  --yo-skeleton-bg: var(--gray-100);
+  --yo-skeleton-highlight: var(--gray-50);
   --yo-skeleton-radius: var(--yo-border-radius-medium);
   --yo-skeleton-box-radius: var(--yo-border-radius-small);
   --yo-skeleton-height: var(--yo-space-100);
