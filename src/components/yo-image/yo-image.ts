@@ -2,22 +2,27 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import styles from './yo-image.css';
 
-@customElement('yo-image')
+const name: string = 'yo-image';
+
+@customElement(name)
 export class YoImage extends LitElement {
+  connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+  }
+
+  // LOCAL ASSETS
+  private imageUrl600 = new URL('../../assets/image/600x400.jpg', import.meta.url).href;
+  private imageUrl300 = new URL('../../assets/image/300x200.jpg', import.meta.url).href;
 
   @property()
   alt = 'My image'
 
-  connectedCallback() {
-    super.connectedCallback();
-    this.classList.add('yo-image');
-  }
-
   render() {
     return html`
       <picture>
-        <source srcset="https://picsum.photos/600/400" media="(min-width: 600px)" />
-        <img part="img" class="yo-image__img" src="https://picsum.photos/300/200" alt="MDN" />
+        <source srcset="${this.imageUrl600}" media="(min-width: 600px)" />
+        <img part="img" class="yo-image__img" src="${this.imageUrl300}" alt="MDN" />
       </picture>
     `
   }

@@ -1,0 +1,207 @@
+/*! ============================================== */
+/*! Design Tokens generated with design-tokens.dev */
+/*! ============================================== */
+
+/* C⚙️re */
+
+:root {
+  /* root */
+  --yo-root-size: 16px;
+
+  /* Pal🎨tte */
+
+  /* primary */
+  --yo-color-primary: hsl(289, 79%, 56%);
+  --yo-color-primary-rgb: 199, 54, 231;
+  --yo-color-primary-contrast: var(--yo-color-contrast-dark);
+  --yo-color-primary-contrast-rgb: 242, 242, 242;
+  --yo-color-primary-tint: hsl(289, 80%, 71%);
+  --yo-color-primary-shade: hsl(289, 62%, 37%);
+  --yo-color-primary-tone: hsl(289, 50%, 54%);
+
+  /* secondary */
+  --yo-color-secondary: hsl(49, 87%, 50%);
+  --yo-color-secondary-rgb: 238, 198, 17;
+  --yo-color-secondary-contrast: var(--yo-color-contrast-light);
+  --yo-color-secondary-contrast-rgb: 13, 13, 13;
+  --yo-color-secondary-tint: hsl(49, 87%, 67%);
+  --yo-color-secondary-shade: hsl(49, 87%, 33%);
+  --yo-color-secondary-tone: hsl(49, 58%, 50%);
+
+  /* accent */
+  --yo-color-accent: #15cade;
+  --yo-color-accent-rgb: 21, 202, 222;
+  --yo-color-accent-contrast: var(--yo-color-contrast-light);
+  --yo-color-accent-contrast-rgb: 13, 13, 13;
+  --yo-color-accent-tint: #86dce9;
+  --yo-color-accent-shade: #23828e;
+  --yo-color-accent-tone: #5bb1be;
+
+  /* util-info */
+  --yo-color-util-info: #4e87e9;
+  --yo-color-util-info-rgb: 78, 135, 233;
+  --yo-color-util-info-contrast: var(--yo-color-contrast-light);
+  --yo-color-util-info-contrast-rgb: 13, 13, 13;
+  --yo-color-util-info-tint: #93adf1;
+  --yo-color-util-info-shade: #395895;
+  --yo-color-util-info-tone: #6984c5;
+
+  /* util-safe */
+  --yo-color-util-safe: #58df31;
+  --yo-color-util-safe-rgb: 88, 223, 49;
+  --yo-color-util-safe-contrast: var(--yo-color-contrast-light);
+  --yo-color-util-safe-contrast-rgb: 13, 13, 13;
+  --yo-color-util-safe-tint: #9beb7e;
+  --yo-color-util-safe-shade: #3f8f27;
+  --yo-color-util-safe-tone: #70bf56;
+
+  /* util-warning */
+  --yo-color-util-warning: #e6af5c;
+  --yo-color-util-warning-rgb: 230, 175, 92;
+  --yo-color-util-warning-contrast: var(--yo-color-contrast-light);
+  --yo-color-util-warning-contrast-rgb: 13, 13, 13;
+  --yo-color-util-warning-tint: #f2c992;
+  --yo-color-util-warning-shade: #93713e;
+  --yo-color-util-warning-tone: #c59f6a;
+
+  /* util-alert */
+  --yo-color-util-alert: #e7385e;
+  --yo-color-util-alert-rgb: 231, 56, 94;
+  --yo-color-util-alert-contrast: var(--yo-color-contrast-light);
+  --yo-color-util-alert-contrast-rgb: 13, 13, 13;
+  --yo-color-util-alert-tint: #f78590;
+  --yo-color-util-alert-shade: #952c3f;
+  --yo-color-util-alert-tone: #c95b69;
+
+  /* gamma */
+  --yo-color-gamma-950: #ffffff;
+  --yo-color-gamma-900: #f2f2f2;
+  --yo-color-gamma-850: #e4e4e4;
+  --yo-color-gamma-800: #d7d7d7;
+  --yo-color-gamma-750: #c9c9c9;
+  --yo-color-gamma-700: #bcbcbc;
+  --yo-color-gamma-650: #aeaeae;
+  --yo-color-gamma-600: #a1a1a1;
+  --yo-color-gamma-550: #949494;
+  --yo-color-gamma-500: #868686;
+  --yo-color-gamma-450: #797979;
+  --yo-color-gamma-400: #6b6b6b;
+  --yo-color-gamma-350: #5e5e5e;
+  --yo-color-gamma-300: #515151;
+  --yo-color-gamma-250: #434343;
+  --yo-color-gamma-200: #363636;
+  --yo-color-gamma-150: #282828;
+  --yo-color-gamma-100: #1b1b1b;
+  --yo-color-gamma-050: #0d0d0d;
+  --yo-color-gamma-000: #000000;
+
+  /* base */
+  --yo-color-base-light: var(--yo-color-gamma-800);
+  --yo-color-base-light-rgb: 215, 215, 215;
+  --yo-color-base-dark: var(--yo-color-gamma-150);
+  --yo-color-base-dark-rgb: 40, 40, 40;
+
+  /* contrast */
+  --yo-color-contrast-light: var(--yo-color-gamma-050);
+  --yo-color-contrast-light-rgb: 13, 13, 13;
+  --yo-color-contrast-dark: var(--yo-color-gamma-900);
+  --yo-color-contrast-dark-rgb: 242, 242, 242;
+
+  /* text */
+  --yo-color-text-strong: var(--yo-color-gamma-050);
+  --yo-color-text-regular: var(--yo-color-gamma-150);
+  --yo-color-text-subtle: var(--yo-color-gamma-250);
+  --yo-color-text-accent: var(--yo-color-primary-tone);
+
+  /* C👑ntent */
+
+  /* font-size */
+  --yo-font-family-base: Open Sans, sans-serif;
+  --yo-font-family-secondary: Inter, system-ui, Helvetica, Arial, sans-serif;
+
+  /* font-size */
+  --yo-font-size-xs: 0.694rem;
+  --yo-font-size-s: 0.833rem;
+  --yo-font-size-n: 1rem;
+  --yo-font-size-l: 1.2rem;
+  --yo-font-size-xl: 1.44rem;
+  --yo-font-size-xxl: 1.728rem;
+
+  /* font-weight */
+  --yo-font-weight-light: 200;
+  --yo-font-weight-medium: 300;
+  --yo-font-weight-regular: 400;
+  --yo-font-weight-bold: 700;
+  --yo-font-weight-dark: 800;
+
+  /* icon-size */
+  --yo-icon-size-xs: 0.867rem;
+  --yo-icon-size-s: 1.041rem;
+  --yo-icon-size-n: 1.25rem;
+  --yo-icon-size-l: 1.5rem;
+  --yo-icon-size-xl: 1.8rem;
+  --yo-icon-size-xxl: 2.16rem;
+
+  /* line-height */
+  --yo-line-height-tight: 1.2;
+  --yo-line-height-regular: 1.6;
+  --yo-line-height-loose: 2.133;
+
+  /* Sp👽ce */
+
+  /* spacing */
+  --yo-space-012: 0.125rem;
+  --yo-space-025: 0.25rem;
+  --yo-space-050: 0.5rem;
+  --yo-space-075: 0.75rem;
+  --yo-space-100: 1rem;
+  --yo-space-125: 1.25rem;
+  --yo-space-150: 1.5rem;
+  --yo-space-175: 1.75rem;
+  --yo-space-200: 2rem;
+  --yo-space-250: 2.5rem;
+  --yo-space-500: 5rem;
+
+  /* local */
+  --yo-side-gap: var(--yo-space-100);
+  --yo-col-gap: var(--yo-space-100);
+  --yo-width-min: 360px;
+  --yo-width-max: 1200px;
+
+  /* Det😈ils */
+
+  /* radius */
+  --yo-radius-small: 0.25rem;
+  --yo-radius-medium: 0.5rem;
+  --yo-radius-large: 1rem;
+  --yo-radius-round: 50%;
+  --yo-radius-pill: 9999px;
+
+  /* shadow */
+  --yo-shadow-color: #c836e8;
+  --yo-shadow-color-rgb: 200, 54, 232;
+  --yo-shadow-small:
+    0px 1px 1px rgba(var(--yo-shadow-color-rgb), 0.2),
+    0px 1px 2px -0.5px rgba(var(--yo-shadow-color-rgb), 0.45),
+    0px 1px 4px -3px rgba(var(--yo-shadow-color-rgb), 0.35);
+  --yo-shadow-medium:
+    0px 1px 1px -0.5px rgba(var(--yo-shadow-color-rgb), 0.1),
+    0px 1px 2px -1px rgba(var(--yo-shadow-color-rgb), 0.25),
+    0px 2px 3px -1.5px rgba(var(--yo-shadow-color-rgb), 0.3),
+    0px 5px 6px -2px rgba(var(--yo-shadow-color-rgb), 0.4);
+  --yo-shadow-large:
+    0px 0.5px 0.5px rgba(var(--yo-shadow-color-rgb), 0.2),
+    0px 2px 2px -0.5px rgba(var(--yo-shadow-color-rgb), 0.25),
+    0px 5px 6px -1px rgba(var(--yo-shadow-color-rgb), 0.25),
+    0px 8px 9px -1px rgba(var(--yo-shadow-color-rgb), 0.3),
+    0px 12px 14px -2px rgba(var(--yo-shadow-color-rgb), 0.3),
+    0px 16px 20px -3px rgba(var(--yo-shadow-color-rgb), 0.25);
+
+  /* duration */
+  --yo-duration-instant: 0.118s;
+  --yo-duration-short: 0.158s;
+  --yo-duration-regular: 0.21s;
+  --yo-duration-long: 0.28s;
+  --yo-duration-extra: 0.373s;
+  --yo-duration-super: 1.5s;
+}

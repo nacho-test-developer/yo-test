@@ -1,13 +1,16 @@
 import { LitElement, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import styles from './yo-card.css';
-/**
- * An example element.
- *
- * @slot - This element has a slot
- */
-@customElement('yo-card')
+
+const name: string = 'yo-card';
+
+@customElement(name)
 export class YoCard extends LitElement {
+  connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+  }
+
   render() {
     return html`
       <slot name="image"></slot>

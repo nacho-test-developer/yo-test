@@ -8,8 +8,15 @@ export interface Countdown {
   day: number;
 }
 
-@customElement('yo-countdown')
+const name: string = 'yo-countdown';
+
+@customElement(name)
 export class YoCountdown extends LitElement {
+  connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+  }
+
   @property({ type: String }) date = "06/12/2027";
 
   show?: boolean = true;

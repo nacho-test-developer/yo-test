@@ -1,14 +1,13 @@
-@import "../src/assets/css/yo-ui.css";
-@import "../src/assets/css/yo-config.css";
+@import "./assets/css/yo-css.css";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --example-color: var(--error-400);
+
+  font-family: var(--yo-family-body);
+  line-height: var(--yo-line-height-medium);
+  font-weight: var(--yo-font-weight-regular);
 
   color-scheme: light dark;
-
-  --main-color: red;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,9 +15,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: var(--yo-color-theme-primary);
+    --color-bg: var(--yo-color-background);
+    --color-body: var(--yo-color-body);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: var(--yo-color-theme-primary);
+    --color-bg: var(--gray-900);
+    --color-body: var(--yo-color-surface);
+  }
+}
+
+/* BASE */
 body {
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-body);
   margin: 0;
   display: grid;
   place-items: center;
@@ -29,51 +45,58 @@ body {
 main {
   container: parent / inline-size; /* Nombre del container */
   max-width: 80rem;
-  margin: 0 auto;
-  padding-inline: 2.5rem;
-  width: calc(100% - 5rem);
+  margin: var(--yo-spacing-medium) auto;
+  padding-inline: var(--yo-spacing-medium);
+  width: calc(100% - var(--yo-spacing-medium));
 }
 
-.ui-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-200);
+/* COMPONENTS */
+.yo-button::part(suffix) {
+  color: var(--example-color);
 }
 
 @container parent (width <= 600px) {
-  .container-grid-example {
-    --main-color: blue;
+  .yo-button::part(suffix) {
+    --example-color: var(--suggestion-400);
 
-    color: var(--main-color);
+    color: var(--example-color);
   }
+}
 
+.yo-image::part(img) {
+  opacity: var(--opacity-95);
+}
+
+/* GRID */
+.ui-grid {
+  display: grid;
+  gap: var(--yo-spacing-medium);
+}
+
+@container parent (width <= 600px) {
   .ui-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-/* EXAMPLES */
-.container-grid-example {
-  color: var(--main-color);
-  margin-bottom: 1rem;
+/* SECTIONS */
+:where(h2, hr, .s-example) {
+  margin-bottom: var(--yo-spacing-medium);
 }
 
-yo-button {
-  --yo-button-color: var(--color-black);
-}
-yo-button::part(suffix) {
-  color: var(--color-red);
+.s-example--skeleton .ui-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-yo-card {
-  --yo-card-gap: var(--space-200);
-  --yo-card-spacing: var(--space-200);
+.s-example--skeleton .right :where(h4, .yo-skeleton) {
+  margin-bottom: var(--yo-spacing-small);
 }
 
-/* .yo-image::part(img) {
-  opacity: 0.1;
-} */
+.s-example--card .ui-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 
-button {
-  border-radius: 80px;
+/* ELEMENTS */
+.skeleton-btn {
+  margin-top: var(--yo-spacing-medium);
 }

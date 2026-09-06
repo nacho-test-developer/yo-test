@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
+    <title>Lib: 'yo' component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/components/yo-button/yo-button.ts"></script>
     <script type="module" src="/src/components/yo-card/yo-card.ts"></script>
@@ -20,59 +26,74 @@
   </head>
   <body>
     <main>
-      <div class="container-grid-example">
-        <yo-countdown date="06/12/2026"></yo-countdown>
-        <span
-          >Aquí el texto debe cambiar de color si su contenedor es mayor o menor
-          a 600px</span
-        >
-      </div>
-      <div class="container-grid-example">
-        <yo-skeleton type="rectangle" size="100%" show></yo-skeleton>
-        <br />
-        <yo-skeleton type="box" size="160px 120px" show></yo-skeleton>
-        <br />
-        <yo-skeleton type="circle" size="80px" show></yo-skeleton>
-        <br />
-        <yo-skeleton id="skeleton-toggle" show>
-          <p>Loaded after skeleton</p>
-        </yo-skeleton>
-        <button id="skeleton-btn" type="button">Switch show</button>
-        <script type="module">
-          const skeleton = document.querySelector("#skeleton-toggle");
-          document
-            .querySelector("#skeleton-btn")
-            ?.addEventListener("click", () => {
-              if (skeleton) skeleton.show = !skeleton.show;
-            });
-        </script>
-      </div>
-      <div class="ui-grid">
-        <yo-card>
-          <p>
-            This is an example text, This is an example text, This is an example
-            text, This is an example text, This is an example text, This is an
-            example text
-          </p>
-          <yo-image slot="image"></yo-image>
-          <yo-button ui="full" slot="actions"
-            ><span slot="suffix">pedro</span> Hola</yo-button
-          >
-        </yo-card>
-        <yo-card>
-          <p>Lorem, ipsum dolor sit amet</p>
-          <yo-image slot="image"></yo-image>
-          <yo-button ui="full" slot="actions">Chau</yo-button>
-        </yo-card>
-        <yo-card>
-          <p>
-            This is an example text, This is an example text, This is an example
-            text, This is an example text, This is an example text, This is an
-            example text
-          </p>
-          <yo-image slot="image"></yo-image>
-        </yo-card>
-      </div>
+      <section class="s-example s-example--countdown">
+        <h2>yo-countdown</h2>
+        <yo-countdown date="06/12/2029"></yo-countdown>
+      </section>
+      <hr />
+      <section class="s-example s-example--skeleton">
+        <h2>yo-skeleton</h2>
+        <div class="ui-grid">
+          <div class="left">
+            <yo-skeleton id="skeleton-toggle" show>
+              <p>Loaded after skeleton</p>
+            </yo-skeleton>
+            <yo-button
+              class="skeleton-btn"
+              id="skeleton-btn"
+              ui="full"
+              slot="actions"
+              >Switch show</yo-button
+            >
+          </div>
+          <div class="right">
+            <h4>rectangle</h4>
+            <yo-skeleton type="rectangle" size="100% 50px" show></yo-skeleton>
+
+            <h4>box</h4>
+            <yo-skeleton type="box" size="160px 120px" show></yo-skeleton>
+
+            <h4>circle</h4>
+            <yo-skeleton type="circle" size="80px" show></yo-skeleton>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="s-example s-example--card">
+        <h2>yo-card</h2>
+        <div class="ui-grid">
+          <yo-card>
+            <p>
+              Aquí el texto (suffix) debe cambiar de color si su contenedor es
+              mayor o menor a 600px (RED 2 BLUE)
+            </p>
+            <yo-image slot="image"></yo-image>
+            <yo-button ui="full" slot="actions"
+              ><span slot="suffix">pedro</span> Hola</yo-button
+            >
+          </yo-card>
+          <yo-card>
+            <p>Lorem, ipsum dolor sit amet</p>
+            <yo-image slot="image"></yo-image>
+            <yo-button ui="full" slot="actions">Chau</yo-button>
+          </yo-card>
+          <yo-card>
+            <p>
+              This is an example text, This is an example text, This is an
+              example text, This is an example text, This is an example text,
+              This is an example text
+            </p>
+            <yo-image slot="image"></yo-image>
+          </yo-card>
+        </div>
+      </section>
     </main>
+
+    <script type="module">
+      const skeleton = document.querySelector("#skeleton-toggle");
+      document.querySelector("#skeleton-btn")?.addEventListener("click", () => {
+        if (skeleton) skeleton.show = !skeleton.show;
+      });
+    </script>
   </body>
 </html>

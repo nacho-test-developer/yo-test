@@ -7,14 +7,13 @@ export type YoSkeletonType = 'circle' | 'default' | 'rectangle' | 'box';
 
 type SkeletonVariant = 'circle' | 'rectangle' | 'box';
 
-/**
- * Precarga visual a modo skeleton.
- *
- * @slot - Contenido real que se muestra cuando `show` es `false`
- * @csspart - Sin parts expuestos; personalizar con vars `--yo-skeleton-*`
- */
-@customElement('yo-skeleton')
+const name: string = 'yo-skeleton';
+@customElement(name)
 export class YoSkeleton extends LitElement {
+  connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+  }
   /**
    * Forma del skeleton: `circle`, `box` o `default` (`rectangle`).
    */

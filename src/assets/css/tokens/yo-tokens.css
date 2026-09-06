@@ -1,0 +1,127 @@
+:root {
+  /* Fonts */
+  --yo-font-family-base: "Open Sans", sans-serif;
+  --yo-font-family-secondary: system-ui, Helvetica, Arial, sans-serif;
+
+  /* FIGMA */
+  --yo-color-body: var(--secondary-400);
+  --yo-color-body-hover: var(--secondary-500);
+  --yo-color-background: var(--white);
+  --yo-color-background-hover: var(--gray-50);
+  --yo-color-surface: var(--white);
+  --yo-color-surface-hover: var(--white);
+  --yo-color-on-surface: var(--primary-400);
+  --yo-color-on-surface-hover: var(--primary-500);
+  --yo-color-surface-secondary: var(--white);
+  --yo-color-surface-secondary-hover: var(--white);
+  --yo-color-on-surface-secondary: var(--secondary-300);
+  --yo-color-on-surface-secondary-hover: var(--secondary-400);
+  --yo-color-surface-tertiary: var(--primary-600);
+  --yo-color-surface-tertiary-hover: var(--primary-700);
+  --yo-color-on-surface-tertiary: var(--primary-100);
+  --yo-color-on-surface-tertiary-hover: var(--primary-100);
+
+  /* color theme primary */
+  --yo-color-theme-primary: var(--primary-400);
+  --yo-color-theme-primary-hover: var(--primary-500);
+  --yo-color-theme-on-primary: var(--black);
+  --yo-color-theme-on-primary-hover: var(--white);
+  --yo-color-theme-primary-container: var(--primary-100);
+  --yo-color-theme-primary-container-hover: var(--primary-200);
+  --yo-color-theme-on-primary-container: var(--primary-600);
+  --yo-color-theme-on-primary-container-hover: var(--primary-600);
+  --yo-color-theme-primary-accent: var(--primary-700);
+  --yo-color-theme-primary-accent-hover: var(--primary-700);
+  --yo-color-theme-on-primary-accent: var(--primary-100);
+  --yo-color-theme-on-primary-accent-hover: var(--primary-100);
+  --yo-color-theme-primary-text: var(--primary-500);
+  --yo-color-theme-primary-text-hover: var(--primary-600);
+
+  /* color theme secondary */
+  --yo-color-theme-secondary: var(--secondary-400);
+  --yo-color-theme-secondary-hover: var(--secondary-500);
+  --yo-color-theme-on-secondary: var(--white);
+  --yo-color-theme-on-secondary-hover: var(--white);
+  --yo-color-theme-secondary-container: var(--secondary-100);
+  --yo-color-theme-secondary-container-hover: var(--secondary-100);
+  --yo-color-theme-on-secondary-container: var(--white);
+  --yo-color-theme-on-secondary-container-hover: var(--white);
+  --yo-color-theme-secondary-accent: var(--secondary-600);
+  --yo-color-theme-secondary-accent-hover: var(--secondary-700);
+  --yo-color-theme-on-secondary-accent: var(--white);
+  --yo-color-theme-on-secondary-accent-hover: var(--white);
+  --yo-color-theme-secondary-text: var(--secondary-400);
+  --yo-color-theme-secondary-text-hover: var(--secondary-500);
+
+  /* color theme tertiary */
+  --yo-color-theme-tertiary: var(--tertiary);
+  --yo-color-theme-tertiary-hover: var(--tertiary-500);
+  --yo-color-theme-on-tertiary: var(--black);
+  --yo-color-theme-on-tertiary-hover: var(--black);
+  --yo-color-theme-tertiary-container: var(--tertiary-100);
+  --yo-color-theme-tertiary-container-hover: var(--tertiary-200);
+  --yo-color-theme-on-tertiary-container: var(--black);
+  --yo-color-theme-on-tertiary-container-hover: var(--black);
+  --yo-color-theme-tertiary-accent: var(--tertiary-700);
+  --yo-color-theme-tertiary-accent-hover: var(--tertiary-700);
+  --yo-color-theme-on-tertiary-accent: var(--black);
+  --yo-color-theme-on-tertiary-accent-hover: var(--black);
+  --yo-color-theme-tertiary-text: var(--black);
+  --yo-color-theme-tertiary-text-hover: var(--black);
+
+  /* font family */
+  --yo-family-title: var(--yo-font-family-secondary);
+  --yo-family-title-alt: var(--yo-font-family-secondary);
+  --yo-family-body: var(--yo-font-family-base);
+  --yo-family-body-alt: var(--yo-font-family-base);
+
+  /* font size */
+  --yo-font-size-display4: var(--font-size-11);
+  --yo-font-size-display3: var(--font-size-10);
+  --yo-font-size-display2: var(--font-size-9);
+  --yo-font-size-display1: var(--font-size-8);
+  --yo-font-size-h1: var(--font-size-7);
+  --yo-font-size-h2: var(--font-size-6);
+  --yo-font-size-h3: var(--font-size-5);
+  --yo-font-size-h4: var(--font-size-4);
+  --yo-font-size-h5: var(--font-size-3);
+  --yo-font-size-h6: var(--font-size-2);
+  --yo-font-size-body: var(--font-size-4);
+  --yo-font-size-small: var(--font-size-3);
+  --yo-font-size-xsmall: var(--font-size-2);
+  --yo-font-size-xxsmall: var(--font-size-1);
+
+  /* font weight */
+  --yo-font-weight-light: var(--font-weight-300);
+  --yo-font-weight-regular: var(--font-weight-400);
+  --yo-font-weight-bold: var(--font-weight-700);
+  --yo-line-height-small: var(--line-height-80);
+
+  /* line height */
+  --yo-line-height-medium: var(--line-height-100);
+  --yo-line-height-large: var(--line-height-140);
+
+  /* border radius */
+  --yo-border-radius-small: var(--border-radius-100);
+  --yo-border-radius-medium: var(--border-radius-200);
+  --yo-border-radius-large: var(--border-radius-400);
+
+  /* border weight */
+  --yo-border-weight-small: var(--border-width-100);
+  --yo-border-weight-medium: var(--border-width-200);
+  --yo-border-weight-large: var(--border-width-400);
+
+  /* spacing */
+  --yo-spacing-xsmall: var(--space-100);
+  --yo-spacing-small: var(--space-200);
+  --yo-spacing-medium: var(--space-300);
+  --yo-spacing-large: var(--space-400);
+
+  /* duration */
+  --yo-duration-instant: 0.118s;
+  --yo-duration-short: 0.158s;
+  --yo-duration-regular: 0.21s;
+  --yo-duration-long: 0.28s;
+  --yo-duration-extra: 0.373s;
+  --yo-duration-super: 1.5s;
+}

@@ -2,17 +2,14 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import styles from './yo-button.css';
 
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
-@customElement('yo-button')
+const name: string = 'yo-button';
+@customElement(name)
 export class YoButton extends LitElement {
-  /**
-   * The number of times the button has been clicked.
-   */
+  connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+  }
+
   @property({ type: Number }) count = 0
 
   render() {
