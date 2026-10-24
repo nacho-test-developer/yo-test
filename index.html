@@ -23,6 +23,10 @@
       type="module"
       src="/src/components/yo-skeleton/yo-skeleton.ts"
     ></script>
+    <script
+      type="module"
+      src="/src/components/yo-collapse/yo-collapse.ts"
+    ></script>
   </head>
   <body>
     <main>
@@ -76,6 +80,20 @@
             <yo-skeleton type="circle" size="80px" show></yo-skeleton>
           </div>
         </div>
+      </section>
+      <hr />
+      <section class="s-example s-example--collapse">
+        <h2>yo-collapse</h2>
+        <yo-collapse summary="Click to expand" open>
+          <p>This content is visible by default because the collapse is open.</p>
+        </yo-collapse>
+        <yo-collapse summary="Another section">
+          <p>Hidden content revealed on click, with smooth height animation.</p>
+          <yo-button ui="full">Action</yo-button>
+        </yo-collapse>
+        <yo-collapse disabled summary="Disabled collapse">
+          <p>You cannot open this one.</p>
+        </yo-collapse>
       </section>
       <hr />
       <section class="s-example s-example--card">
