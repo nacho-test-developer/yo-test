@@ -18,4 +18,7 @@
   --yo-skeleton-box-radius: var(--yo-border-radius-small);
   --yo-skeleton-height: var(--yo-space-100);
   --yo-skeleton-duration: var(--yo-duration-super);
+
+  /* YO-COUNTDOWN */
+  --yo-countdown-unit-color: var(--yo-color-theme-primary-text-hover);
 }

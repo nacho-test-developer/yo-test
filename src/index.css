@@ -58,6 +58,11 @@ main {
   }
 }
 
+.yo-countdown::part(unit) {
+  font-size: var(--yo-font-size-xxsmall);
+  font-weight: var(--yo-font-weight-bold);
+}
+
 .yo-image::part(img) {
   opacity: var(--opacity-95);
 }

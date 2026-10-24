@@ -1,5 +1,6 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
+import styles from './yo-countdown.css';
 
 export interface Countdown {
   second: number;
@@ -12,14 +13,9 @@ const name: string = 'yo-countdown';
 
 @customElement(name)
 export class YoCountdown extends LitElement {
-  connectedCallback() {
-    super.connectedCallback();
-    this.classList.add(name);
-  }
+  @property({ type: String }) date = "06/12/2029";
 
-  @property({ type: String }) date = "06/12/2027";
-
-  show?: boolean = true;
+  @state() show?: boolean = true;
 
   x: Countdown = {
     second: 1000,
@@ -28,6 +24,7 @@ export class YoCountdown extends LitElement {
     day: 86400000,
   }
 
+  @state()
   y: Countdown = {
     second: 0,
     minute: 0,
@@ -35,23 +32,44 @@ export class YoCountdown extends LitElement {
     day: 0,
   }
 
+  private timerId?: ReturnType<typeof setInterval>;
+
+  override connectedCallback() {
+    super.connectedCallback();
+    this.classList.add(name);
+    this.countDown();
+    this.timerId = setInterval(() => this.countDown(), 1000);
+  }
+
+  override disconnectedCallback() {
+    if (this.timerId !== undefined) {
+      clearInterval(this.timerId);
+      this.timerId = undefined;
+    }
+    super.disconnectedCallback();
+  }
+
   countDown() {
     const countDownEnd: number = new Date(this.date).getTime();
     const now: number = new Date().getTime(),
       distance: number = countDownEnd - now;
 
-    this.y.day = Math.floor(distance / this.x.day);
-    this.y.hour = Math.floor((distance % this.x.day) / this.x.hour);
-    this.y.minute = Math.floor((distance % this.x.hour) / this.x.minute);
-    this.y.second = Math.floor((distance % this.x.minute) / this.x.second);
+    // Se reasigna el objeto completo: mutar `this.y.day = ...` no dispara
+    // re-render en Lit (ni con @state). Al crear un objeto nuevo, Lit
+    // detecta el cambio y actualiza el HTML. La alternativa sería llamar
+    // a `this.requestUpdate()` (no existe `updateValue()`) tras mutar.
+    this.y = {
+      day: Math.floor(distance / this.x.day),
+      hour: Math.floor((distance % this.x.day) / this.x.hour),
+      minute: Math.floor((distance % this.x.hour) / this.x.minute),
+      second: Math.floor((distance % this.x.minute) / this.x.second),
+    };
 
     // if (distance < 0) {
     if (this.y.second === 35) {
       this.show = false;
     }
-  };
-
-  timerId = setInterval(() => this.countDown(), 1000);
+  }
 
   render() {
     if (this.show) {
@@ -59,15 +77,14 @@ export class YoCountdown extends LitElement {
     } else {
       console.log('Countdown error');
     }
-    this.timerId
     return html`
       ${this.show
         ? html`
           <div class="yo-countdown__content">
-            <span part="day">${this.y.day.toString()} D</span>
-            <span part="day">${this.y.hour.toString()} H</span>
-            <span part="day">${this.y.minute.toString()} M</span>
-            <span part="day">${this.y.second.toString()} S</span>
+            <span part="day">${this.y.day.toString()} <small part="unit">D</small></span>
+            <span part="day">${this.y.hour.toString()} <small part="unit">H</small></span>
+            <span part="day">${this.y.minute.toString()} <small part="unit">M</small></span>
+            <span part="day">${this.y.second.toString()} <small part="unit">S</small></span>
           </div>
         `
         : html`
@@ -76,4 +93,6 @@ export class YoCountdown extends LitElement {
       }
     `
   }
+
+  static styles = styles
 }

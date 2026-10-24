@@ -1,0 +1,17 @@
+:host {
+  display: inline-block;
+  text-align: center;
+}
+
+small {
+  color: var(--yo-countdown-unit-color, var(--yo-color-theme-primary));
+}
+
+@media (prefers-color-scheme: light) {
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
