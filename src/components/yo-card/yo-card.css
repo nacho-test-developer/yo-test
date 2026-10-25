@@ -1,6 +1,6 @@
 :host {
-  background-color: var(--yo-card-bg-color, --color-bg);
-  color: var(--yo-card-color, --color-text);
+  background-color: var(--yo-card-bg-color, var(--color-bg));
+  color: var(--yo-card-color, var(--color-body));
   border-radius: var(--yo-card-border-radius, 0);
   box-shadow: var(--yo-card-box-shadow, none);
   display: flex;

@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="./src/index.css" />
     <script type="module" src="/src/components/yo-button/yo-button.ts"></script>
     <script type="module" src="/src/components/yo-card/yo-card.ts"></script>
@@ -27,8 +28,13 @@
       type="module"
       src="/src/components/yo-collapse/yo-collapse.ts"
     ></script>
+    <script
+      type="module"
+      src="/src/components/yo-theme-toggle/yo-theme-toggle.ts"
+    ></script>
   </head>
   <body>
+    <yo-theme-toggle></yo-theme-toggle>
     <main>
       <section class="s-example s-example--countdown">
         <h2>yo-countdown</h2>
