@@ -119,7 +119,7 @@ Placeholder de carga con formas.
 <yo-skeleton type="circle" size="80px" show></yo-skeleton>
 ```
 
-### `<yo-collapse>`
+### `<yo-collapse-item>`
 
 Panel colapsable basado en `<details>`.
 

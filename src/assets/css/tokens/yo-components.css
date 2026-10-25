@@ -20,13 +20,13 @@
   --yo-skeleton-duration: var(--yo-duration-super);
 
   /* YO-COLLAPSE */
-  --yo-collapse-bg: transparent;
-  --yo-collapse-border: 1px solid var(--gray-200);
-  --yo-collapse-border-radius: var(--yo-border-radius-medium);
-  --yo-collapse-padding: var(--yo-spacing-small) var(--yo-spacing-medium);
-  --yo-collapse-padding-inline: var(--yo-spacing-medium);
-  --yo-collapse-duration: var(--yo-duration-regular);
-  --yo-collapse-summary-color: inherit;
+  --yo-collapse-item-bg: transparent;
+  --yo-collapse-item-border: 1px solid var(--gray-200);
+  --yo-collapse-item-border-radius: var(--yo-border-radius-medium);
+  --yo-collapse-item-padding: var(--yo-spacing-small) var(--yo-spacing-medium);
+  --yo-collapse-item-padding-inline: var(--yo-spacing-medium);
+  --yo-collapse-item-duration: var(--yo-duration-regular);
+  --yo-collapse-item-summary-color: inherit;
   /* YO-COUNTDOWN */
   --yo-countdown-unit-color: var(--yo-color-theme-primary-text-hover);
 }

@@ -26,7 +26,7 @@
   --yo-card-color: var(--yo-color-body);
   --yo-skeleton-bg: var(--gray-100);
   --yo-skeleton-highlight: var(--gray-50);
-  --yo-collapse-border: 1px solid var(--gray-200);
+  --yo-collapse-item-border: 1px solid var(--gray-200);
   --yo-button-bg: #f9f9f9;
   --yo-button-text: #1a1a1a;
 }
@@ -52,7 +52,7 @@
   --yo-card-color: var(--gray-200);
   --yo-skeleton-bg: var(--gray-700);
   --yo-skeleton-highlight: var(--gray-600);
-  --yo-collapse-border: 1px solid var(--gray-700);
+  --yo-collapse-item-border: 1px solid var(--gray-700);
   --yo-button-bg: #1a1a1a;
   --yo-button-text: #ffffff;
 }
@@ -75,7 +75,7 @@
   --yo-card-color: var(--secondary-400);
   --yo-skeleton-bg: var(--gray-100);
   --yo-skeleton-highlight: var(--gray-50);
-  --yo-collapse-border: 1px solid var(--gray-200);
+  --yo-collapse-item-border: 1px solid var(--gray-200);
   --yo-button-bg: #f9f9f9;
   --yo-button-text: #1a1a1a;
 }
@@ -101,7 +101,7 @@
     --yo-card-color: var(--gray-200);
     --yo-skeleton-bg: var(--gray-700);
     --yo-skeleton-highlight: var(--gray-600);
-    --yo-collapse-border: 1px solid var(--gray-700);
+    --yo-collapse-item-border: 1px solid var(--gray-700);
     --yo-button-bg: #1a1a1a;
     --yo-button-text: #ffffff;
   }
