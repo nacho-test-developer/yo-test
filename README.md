@@ -26,11 +26,13 @@ npm install
 
 ## Comandos
 
-| Comando           | Descripción                                        |
-| ----------------- | -------------------------------------------------- |
-| `npm start`       | Servidor de desarrollo (Vite)                      |
-| `npm run build`   | Typecheck (`tsc`) + build de producción en `dist/` |
-| `npm run preview` | Sirve `dist/` localmente                           |
+| Comando                   | Descripción                                        |
+| ------------------------- | -------------------------------------------------- |
+| `npm start`               | Servidor de desarrollo (Vite)                      |
+| `npm run build`           | Typecheck (`tsc`) + build de producción en `dist/` |
+| `npm run preview`         | Sirve `dist/` localmente                           |
+| `npm run storybook`       | Servidor de Storybook (componentes y stories)      |
+| `npm run build-storybook` | Build estático de Storybook en `storybook-static/` |
 
 > Siempre ejecutar `npm run build` para verificar cambios: el typecheck es estricto (`strict`, `noUnusedLocals`, `noUnusedParameters`) y solo incluye `src/`.
 

@@ -1,6 +1,6 @@
-import { LitElement, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-import styles from './yo-countdown.css';
+import { LitElement, html } from "lit";
+import { customElement, property, state } from "lit/decorators.js";
+import styles from "./yo-countdown.css";
 
 export interface Countdown {
   second: number;
@@ -9,7 +9,7 @@ export interface Countdown {
   day: number;
 }
 
-const name: string = 'yo-countdown';
+const name: string = "yo-countdown";
 
 @customElement(name)
 export class YoCountdown extends LitElement {
@@ -88,6 +88,6 @@ export class YoCountdown extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'yo-countdown': YoCountdown;
+    "yo-countdown": YoCountdown;
   }
 }

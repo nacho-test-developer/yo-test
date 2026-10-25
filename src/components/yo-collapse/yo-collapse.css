@@ -14,7 +14,10 @@ summary {
   align-items: center;
   justify-content: space-between;
   gap: var(--yo-spacing-small, 1rem);
-  padding: var(--yo-collapse-padding, var(--yo-spacing-small, 1rem) var(--yo-spacing-medium, 1.5rem));
+  padding: var(
+    --yo-collapse-padding,
+    var(--yo-spacing-small, 1rem) var(--yo-spacing-medium, 1.5rem)
+  );
   cursor: pointer;
   list-style: none;
   font-weight: var(--yo-font-weight-bold, 700);
@@ -27,7 +30,7 @@ summary::-webkit-details-marker {
 }
 
 summary::marker {
-  content: '';
+  content: "";
 }
 
 :host([disabled]) summary {

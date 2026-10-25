@@ -1,8 +1,8 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import styles from './yo-button.css';
+import { LitElement, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import styles from "./yo-button.css";
 
-const name: string = 'yo-button';
+const name: string = "yo-button";
 @customElement(name)
 export class YoButton extends LitElement {
   connectedCallback() {
@@ -10,7 +10,7 @@ export class YoButton extends LitElement {
     this.classList.add(name);
   }
 
-  @property({ type: Number }) count = 0
+  @property({ type: Number }) count = 0;
 
   render() {
     return html`
@@ -19,18 +19,18 @@ export class YoButton extends LitElement {
         <slot></slot>
         <slot part="suffix" name="suffix"></slot>
       </button>
-    `
+    `;
   }
 
-  private _onClick() {
-    this.count++
-  }
+  private _onClick = () => {
+    this.count++;
+  };
 
-  static styles = styles
+  static styles = styles;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'yo-button': YoButton
+    "yo-button": YoButton;
   }
 }
