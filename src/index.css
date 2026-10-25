@@ -7,27 +7,103 @@
   line-height: var(--yo-line-height-medium);
   font-weight: var(--yo-font-weight-regular);
 
-  color-scheme: light dark;
+  color-scheme: light;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Semantic colors (light defaults) */
+  --color-primary: var(--yo-color-theme-primary);
+  --color-bg: var(--yo-color-background);
+  --color-body: var(--yo-color-body);
+  --color-surface: var(--yo-color-surface);
+  --color-text: var(--yo-color-body);
+
+  /* Component tokens that follow the theme */
+  --yo-card-bg-color: var(--yo-color-surface);
+  --yo-card-color: var(--yo-color-body);
+  --yo-skeleton-bg: var(--gray-100);
+  --yo-skeleton-highlight: var(--gray-50);
+  --yo-collapse-border: 1px solid var(--gray-200);
+  --yo-button-bg: #f9f9f9;
+  --yo-button-text: #1a1a1a;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-primary: var(--yo-color-theme-primary);
-    --color-bg: var(--yo-color-background);
-    --color-body: var(--yo-color-body);
-  }
+/* Explicit dark theme */
+:root[data-theme='dark'],
+:root.dark {
+  color-scheme: dark;
+
+  --yo-color-background: var(--gray-900);
+  --yo-color-surface: var(--gray-800);
+  --yo-color-body: var(--gray-200);
+  --yo-color-body-hover: var(--gray-100);
+  --yo-color-background-hover: var(--gray-800);
+  --yo-color-surface-hover: var(--gray-700);
+
+  --color-bg: var(--gray-900);
+  --color-body: var(--gray-200);
+  --color-surface: var(--gray-800);
+  --color-text: var(--gray-200);
+
+  --yo-card-bg-color: var(--gray-800);
+  --yo-card-color: var(--gray-200);
+  --yo-skeleton-bg: var(--gray-700);
+  --yo-skeleton-highlight: var(--gray-600);
+  --yo-collapse-border: 1px solid var(--gray-700);
+  --yo-button-bg: #1a1a1a;
+  --yo-button-text: #ffffff;
 }
 
+/* Explicit light theme (overrides an OS dark preference) */
+:root[data-theme='light'],
+:root.light {
+  color-scheme: light;
+
+  --yo-color-background: var(--white);
+  --yo-color-surface: var(--white);
+  --yo-color-body: var(--secondary-400);
+
+  --color-bg: var(--white);
+  --color-body: var(--secondary-400);
+  --color-surface: var(--white);
+  --color-text: var(--secondary-400);
+
+  --yo-card-bg-color: var(--white);
+  --yo-card-color: var(--secondary-400);
+  --yo-skeleton-bg: var(--gray-100);
+  --yo-skeleton-highlight: var(--gray-50);
+  --yo-collapse-border: 1px solid var(--gray-200);
+  --yo-button-bg: #f9f9f9;
+  --yo-button-text: #1a1a1a;
+}
+
+/* Follow the OS preference when the user hasn't chosen explicitly */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: var(--yo-color-theme-primary);
+  :root:not([data-theme]):not(.light):not(.dark) {
+    color-scheme: dark;
+
+    --yo-color-background: var(--gray-900);
+    --yo-color-surface: var(--gray-800);
+    --yo-color-body: var(--gray-200);
+    --yo-color-body-hover: var(--gray-100);
+    --yo-color-background-hover: var(--gray-800);
+    --yo-color-surface-hover: var(--gray-700);
+
     --color-bg: var(--gray-900);
-    --color-body: var(--yo-color-surface);
+    --color-body: var(--gray-200);
+    --color-surface: var(--gray-800);
+    --color-text: var(--gray-200);
+
+    --yo-card-bg-color: var(--gray-800);
+    --yo-card-color: var(--gray-200);
+    --yo-skeleton-bg: var(--gray-700);
+    --yo-skeleton-highlight: var(--gray-600);
+    --yo-collapse-border: 1px solid var(--gray-700);
+    --yo-button-bg: #1a1a1a;
+    --yo-button-text: #ffffff;
   }
 }
 
@@ -103,4 +179,12 @@ main {
   .s-example .ui-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* THEME TOGGLE */
+.yo-theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: var(--z-index-high, 100);
 }
