@@ -1,11 +1,20 @@
-import { defineConfig } from 'vite'
-import litCss from 'vite-plugin-lit-css'
+import litCss from "vite-plugin-lit-css";
+import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
-  base: '/dist/',
-  plugins: [
+  staged: {
+    "*": "vp check --fix",
+  },
+  fmt: {},
+  lint: {
+    jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
+    rules: { "vite-plus/prefer-vite-plus-imports": "error" },
+    options: { typeAware: true, typeCheck: true },
+  },
+  base: "./",
+  plugins: lazyPlugins(() => [
     litCss({
-      exclude: './src/index.css'
+      exclude: "./src/index.css",
     }),
-  ],
-})
+  ]),
+});
