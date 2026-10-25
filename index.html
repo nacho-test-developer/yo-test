@@ -18,7 +18,7 @@
     <script type="module" src="/src/components/yo-image/yo-image.ts"></script>
     <script type="module" src="/src/components/yo-countdown/yo-countdown.ts"></script>
     <script type="module" src="/src/components/yo-skeleton/yo-skeleton.ts"></script>
-    <script type="module" src="/src/components/yo-collapse/yo-collapse.ts"></script>
+    <script type="module" src="/src/components/yo-collapse-item/yo-collapse-item.ts"></script>
     <script type="module" src="/src/components/yo-theme-toggle/yo-theme-toggle.ts"></script>
   </head>
   <body>
@@ -70,17 +70,17 @@
       </section>
       <hr />
       <section class="s-example s-example--collapse">
-        <h2>yo-collapse</h2>
-        <yo-collapse summary="Click to expand" open>
+        <h2>yo-collapse-item</h2>
+        <yo-collapse-item summary="Click to expand" open>
           <p>This content is visible by default because the collapse is open.</p>
-        </yo-collapse>
-        <yo-collapse summary="Another section">
+        </yo-collapse-item>
+        <yo-collapse-item summary="Another section">
           <p>Hidden content revealed on click, with smooth height animation.</p>
           <yo-button ui="full">Action</yo-button>
-        </yo-collapse>
-        <yo-collapse disabled summary="Disabled collapse">
+        </yo-collapse-item>
+        <yo-collapse-item disabled summary="Disabled collapse">
           <p>You cannot open this one.</p>
-        </yo-collapse>
+        </yo-collapse-item>
       </section>
       <hr />
       <section class="s-example s-example--card">

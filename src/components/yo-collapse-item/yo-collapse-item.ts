@@ -1,11 +1,11 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import styles from "./yo-collapse.css";
+import styles from "./yo-collapse-item.css";
 
-const name: string = "yo-collapse";
+const name: string = "yo-collapse-item";
 
 @customElement(name)
-export class YoCollapse extends LitElement {
+export class YoCollapseItem extends LitElement {
   /**
    * Abre/cierra el collapse. Reflejado al atributo `open`.
    */
@@ -45,10 +45,10 @@ export class YoCollapse extends LitElement {
       <details ?open=${this.open} @toggle=${this._onToggle} @click=${this._onClick}>
         <summary part="summary">
           <slot name="summary">${this.summary}</slot>
-          <span class="yo-collapse__icon" aria-hidden="true"></span>
+          <span class="yo-collapse-item__icon" aria-hidden="true"></span>
         </summary>
-        <div class="yo-collapse__content">
-          <div class="yo-collapse__inner">
+        <div class="yo-collapse-item__content">
+          <div class="yo-collapse-item__inner">
             <slot></slot>
           </div>
         </div>
@@ -61,6 +61,6 @@ export class YoCollapse extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "yo-collapse": YoCollapse;
+    "yo-collapse-item": YoCollapseItem;
   }
 }

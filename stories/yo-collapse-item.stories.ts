@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
-import "../src/components/yo-collapse/yo-collapse.ts";
+import "../src/components/yo-collapse-item/yo-collapse-item.ts";
 import "../src/components/yo-button/yo-button.ts";
 
 const meta = {
-  title: "Components/yo-collapse",
-  component: "yo-collapse",
+  title: "Components/yo-collapse-item",
+  component: "yo-collapse-item",
   tags: ["autodocs"],
   argTypes: {
     open: { control: "boolean" },
@@ -18,10 +18,10 @@ const meta = {
     disabled: false,
   },
   render: (args) => html`
-    <yo-collapse ?open=${args.open} summary=${args.summary} ?disabled=${args.disabled}>
+    <yo-collapse-item ?open=${args.open} summary=${args.summary} ?disabled=${args.disabled}>
       <p>Contenido oculto que se revela al abrir.</p>
       <yo-button ui="full">Acción</yo-button>
-    </yo-collapse>
+    </yo-collapse-item>
   `,
 } satisfies Meta<{ open: boolean; summary: string; disabled: boolean }>;
 
@@ -40,9 +40,9 @@ export const Disabled: Story = {
 
 export const WithSummarySlot: Story = {
   render: () => html`
-    <yo-collapse>
+    <yo-collapse-item>
       <span slot="summary">Encabezado personalizado</span>
       <p>Contenido.</p>
-    </yo-collapse>
+    </yo-collapse-item>
   `,
 };
