@@ -8,7 +8,7 @@ Prototipo de librería de Web Components (Lit 3 + Vite 5 + TypeScript) con la fa
 ## Stack
 
 - **Lit** 3.1 (Web Components)
-- **Vite** 5.3 (dev server + build)
+- **Vite** 7.3 (dev server + build)
 - **TypeScript** 5.2 (strict)
 - **UnoCSS** (preset-mini + rem-to-px, modo `shadow-dom`)
 - `vite-plugin-lit-css` para importar CSS como estilos Lit
