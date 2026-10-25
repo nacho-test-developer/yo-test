@@ -1,0 +1,27 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  border: 1px solid var(--gray-300, #d1d5db);
+  border-radius: var(--yo-border-radius-medium, 1rem);
+  background-color: var(--color-surface, var(--yo-color-surface, #ffffff));
+  color: var(--color-body, var(--yo-color-body, #111827));
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--yo-duration-regular, 0.21s) ease,
+    color var(--yo-duration-regular, 0.21s) ease;
+}
+
+button:hover {
+  background-color: var(--color-bg, var(--yo-color-background, #f3f4f6));
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-primary, var(--yo-color-theme-primary));
+  outline-offset: 2px;
+}
