@@ -1,8 +1,8 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import styles from './yo-image.css';
+import { LitElement, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import styles from "./yo-image.css";
 
-const name: string = 'yo-image';
+const name: string = "yo-image";
 
 @customElement(name)
 export class YoImage extends LitElement {
@@ -12,11 +12,11 @@ export class YoImage extends LitElement {
   }
 
   // LOCAL ASSETS
-  private imageUrl600 = new URL('../../assets/image/600x400.jpg', import.meta.url).href;
-  private imageUrl300 = new URL('../../assets/image/300x200.jpg', import.meta.url).href;
+  private imageUrl600 = new URL("../../assets/image/600x400.jpg", import.meta.url).href;
+  private imageUrl300 = new URL("../../assets/image/300x200.jpg", import.meta.url).href;
 
   @property()
-  alt = 'My image'
+  alt = "My image";
 
   render() {
     return html`
@@ -24,7 +24,7 @@ export class YoImage extends LitElement {
         <source srcset="${this.imageUrl600}" media="(min-width: 600px)" />
         <img part="img" class="yo-image__img" src="${this.imageUrl300}" alt="MDN" />
       </picture>
-    `
+    `;
   }
 
   static styles = styles;

@@ -1,8 +1,8 @@
-import { LitElement, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
-import styles from './yo-card.css';
+import { LitElement, html } from "lit";
+import { customElement } from "lit/decorators.js";
+import styles from "./yo-card.css";
 
-const name: string = 'yo-card';
+const name: string = "yo-card";
 
 @customElement(name)
 export class YoCard extends LitElement {
@@ -18,14 +18,14 @@ export class YoCard extends LitElement {
         <slot></slot>
         <slot name="actions"></slot>
       </div>
-    `
+    `;
   }
 
-  static styles = styles
+  static styles = styles;
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    'yo-card': YoCard
+    "yo-card": YoCard;
   }
 }

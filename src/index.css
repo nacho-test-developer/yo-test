@@ -32,7 +32,7 @@
 }
 
 /* Explicit dark theme */
-:root[data-theme='dark'],
+:root[data-theme="dark"],
 :root.dark {
   color-scheme: dark;
 
@@ -58,7 +58,7 @@
 }
 
 /* Explicit light theme (overrides an OS dark preference) */
-:root[data-theme='light'],
+:root[data-theme="light"],
 :root.light {
   color-scheme: light;
 

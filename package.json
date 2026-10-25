@@ -7,14 +7,18 @@
     "start": "vp dev",
     "build": "tsc && vp build",
     "preview": "vp preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "prepare": "vp config"
   },
   "dependencies": {
     "lit": "^3.1.4"
   },
   "devDependencies": {
+    "@storybook/web-components-vite": "^10.6.3",
     "@unocss/preset-mini": "^66.11.0",
     "@unocss/preset-rem-to-px": "^66.11.0",
+    "storybook": "^10.6.3",
     "typescript": "^5.2.2",
     "unocss": "^66.11.0",
     "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",

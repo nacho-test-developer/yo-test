@@ -12,7 +12,8 @@ button {
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
-  transition: background-color var(--yo-duration-regular, 0.21s) ease,
+  transition:
+    background-color var(--yo-duration-regular, 0.21s) ease,
     color var(--yo-duration-regular, 0.21s) ease;
 }
 

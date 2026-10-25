@@ -1,8 +1,8 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import styles from './yo-collapse.css';
+import { LitElement, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import styles from "./yo-collapse.css";
 
-const name: string = 'yo-collapse';
+const name: string = "yo-collapse";
 
 @customElement(name)
 export class YoCollapse extends LitElement {
@@ -14,14 +14,14 @@ export class YoCollapse extends LitElement {
   /**
    * Texto del encabezado (summary). También se puede pasar vía slot `summary`.
    */
-  @property({ type: String }) summary = '';
+  @property({ type: String }) summary = "";
 
   /**
    * Deshabilita la interacción.
    */
   @property({ type: Boolean, reflect: true }) disabled = false;
 
-  private _onToggle(e: Event) {
+  private _onToggle = (e: Event) => {
     const details = e.currentTarget as HTMLDetailsElement;
     if (this.disabled) {
       e.preventDefault();
@@ -31,22 +31,18 @@ export class YoCollapse extends LitElement {
     if (details.open !== this.open) {
       this.open = details.open;
     }
-  }
+  };
 
-  private _onClick(e: Event) {
+  private _onClick = (e: Event) => {
     if (this.disabled) {
       e.preventDefault();
       e.stopPropagation();
     }
-  }
+  };
 
   render() {
     return html`
-      <details
-        ?open=${this.open}
-        @toggle=${this._onToggle}
-        @click=${this._onClick}
-      >
+      <details ?open=${this.open} @toggle=${this._onToggle} @click=${this._onClick}>
         <summary part="summary">
           <slot name="summary">${this.summary}</slot>
           <span class="yo-collapse__icon" aria-hidden="true"></span>
@@ -65,6 +61,6 @@ export class YoCollapse extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'yo-collapse': YoCollapse;
+    "yo-collapse": YoCollapse;
   }
 }
